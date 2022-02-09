@@ -8,5 +8,7 @@ module.exports = {
     options: {
       "url": "http://localhost/bookshop/graphql"
     }
-  }]
+  },
+  "gatsby-plugin-image",
+  "gatsby-plugin-sharp",]
 };
