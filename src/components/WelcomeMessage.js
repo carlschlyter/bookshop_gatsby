@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 const WelcomeMessage = () => {
 
     const data = useStaticQuery(graphql`
-    query MyQuery {
+    query {
         wpPage(id: {eq: "cG9zdDo5"}) {
           title
           homePageSettings {
@@ -24,7 +24,7 @@ const WelcomeMessage = () => {
   return (
      <div> 
          {data.wpPage.homePageSettings.flexContent.map(flexField => (
-             <div>
+             <div key={1}>
                 <h2>{flexField.header}</h2>
                 <h3>{flexField.subHeader}</h3>
                 <p>{flexField.infoText}</p>

@@ -3,7 +3,6 @@ import Test from '../components/Test'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import WelcomeMessage from '../components/WelcomeMessage'
-import { graphql } from 'gatsby'
 
 const IndexPage = ({ data }) => {
   return (

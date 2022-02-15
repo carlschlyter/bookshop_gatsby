@@ -1,20 +1,36 @@
 import React from 'react';
-import Test from '../components/Test';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 
-const about = () => (
-
+const about = ( {data} ) => {
+    return (   
     <main>
         <Layout pageTitle="Om">
-            <Test name="Mia" age="61"/>
-            <h1>Här är om-sidan</h1>
-            <h2>Här kommer lite info om...</h2>
+            {data.wpPage.aboutPageSettings.flexContent.map(content => (
+                <>
+                    <h1>{content.header}</h1>
+                    <h2>{content.subHeader}</h2>
+                </>
+             ))}
         </Layout>
-        
+    </main>)
+};
 
-    </main>
+export const pageQuery = graphql`
+query MyQuery {
+    wpPage(id: {eq: "cG9zdDoxMg=="}) {
+      aboutPageSettings {
+        flexContent {
+          ... on WpPage_Aboutpagesettings_FlexContent_HeaderSection {
+            fieldGroupName
+            header
+            subHeader
+          }
+        }
+      }
+    }
+  }
+`
 
-
-);
 
 export default about;
