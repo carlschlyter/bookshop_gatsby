@@ -6,10 +6,10 @@ const about = ( {data} ) => {
     return (   
     <main>
         <Layout pageTitle="Om">
-            {data.wpPage.aboutPageSettings.flexContent.map(content => (
+            {data.wpPage.aboutPageSettings.aboutPageContent.map(field => (
                 <>
-                    <h1>{content.header}</h1>
-                    <h2>{content.subHeader}</h2>
+                    <h1>{field.header}</h1>
+                    <h2>{field.subHeader}</h2>
                 </>
              ))}
         </Layout>
@@ -17,18 +17,18 @@ const about = ( {data} ) => {
 };
 
 export const pageQuery = graphql`
-query MyQuery {
+query about {
     wpPage(id: {eq: "cG9zdDoxMg=="}) {
-      aboutPageSettings {
-        flexContent {
-          ... on WpPage_Aboutpagesettings_FlexContent_HeaderSection {
-            fieldGroupName
-            header
-            subHeader
+        aboutPageSettings {
+          aboutPageContent {
+            ... on WpPage_Aboutpagesettings_AboutPageContent_HeaderSection {
+              fieldGroupName
+              header
+              subHeader
+            }
           }
         }
       }
-    }
   }
 `
 

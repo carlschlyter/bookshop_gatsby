@@ -6,28 +6,25 @@ const WelcomeMessage = () => {
     const data = useStaticQuery(graphql`
     query {
         wpPage(id: {eq: "cG9zdDo5"}) {
-          title
-          homePageSettings {
-            flexContent {
-              ... on WpPage_Homepagesettings_FlexContent_HeaderSection {
-                header
-                subHeader
-                infoText
+            homePageSettings {
+              homePageContent {
+                ... on WpPage_Homepagesettings_HomePageContent_HeaderSection {
+                  fieldGroupName
+                  header
+                  subHeader
+                }
               }
             }
           }
-        }
-      }
-      
+      }      
     `)
 
   return (
      <div> 
-         {data.wpPage.homePageSettings.flexContent.map(flexField => (
+         {data.wpPage.homePageSettings.homePageContent.map(field => (
              <div key={1}>
-                <h2>{flexField.header}</h2>
-                <h3>{flexField.subHeader}</h3>
-                <p>{flexField.infoText}</p>
+                <h2>{field.header}</h2>
+                <h3>{field.subHeader}</h3>
             </div>
          ))}
 
