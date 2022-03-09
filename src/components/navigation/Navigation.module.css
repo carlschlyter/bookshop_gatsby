@@ -1,5 +1,6 @@
 
 .nav-links {
+    width: 100%; 
     display: flex; 
     list-style: none;
     padding-left: 0;

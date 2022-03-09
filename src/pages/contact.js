@@ -18,7 +18,7 @@ const contact = ( {data} ) => {
 
 export const pageQuery = graphql`
 query contact {
-    wpPage(id: {eq: "cG9zdDoyMw=="}) {
+    wpPage(id: {eq: "cG9zdDoxMQ=="}) {
         contactPageSettings {
           contactPageContent {
             ... on WpPage_Contactpagesettings_ContactPageContent_HeaderSection {

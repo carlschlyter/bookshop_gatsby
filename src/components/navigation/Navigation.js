@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Link } from 'gatsby'
 import { navLinks, navLinkItem, navLinkText } from './navigation.module.css'
 
+
 const Navigation = () => {
 
   const data = useStaticQuery(graphql`
@@ -23,7 +24,6 @@ const Navigation = () => {
 
   return (
     <div>
-    
       <nav>
         <ul className={navLinks} key={1}>
           {data.wpMenu.menuItems.nodes.map(node => (          
@@ -33,8 +33,7 @@ const Navigation = () => {
                 </Link>
             </li>))}
         </ul>
-      </nav>
-  
+      </nav>  
     </div>
 
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const WelcomeMessage = () => {
 
@@ -20,15 +21,14 @@ const WelcomeMessage = () => {
     `)
 
   return (
-     <div> 
+     <Container fluid='md'> 
          {data.wpPage.homePageSettings.homePageContent.map(field => (
-             <div key={1}>
-                <h2>{field.header}</h2>
-                <h3>{field.subHeader}</h3>
-            </div>
+            <Row key={1}>
+                  <Col>{field.header}</Col>
+                  <Col>{field.subHeader}</Col>
+            </Row>
          ))}
-
-    </div>);
+    </Container>);
 };
 
 

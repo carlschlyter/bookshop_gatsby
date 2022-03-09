@@ -20,7 +20,7 @@ const categories = ( {data} ) => {
 
 export const pageQuery = graphql`
 query categories {
-    wpPage(id: {eq: "cG9zdDo3NA=="}) {
+    wpPage(id: {eq: "cG9zdDoxMw=="}) {
         categoriesPageSettings {
           categoriesPageContent {
             ... on WpPage_Categoriespagesettings_CategoriesPageContent_HeaderSection {
