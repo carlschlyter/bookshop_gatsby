@@ -10,8 +10,12 @@ const Layout = ({ pageTitle, children }) => {
     <Container fluid={true} className="p-0">
       <Row>
         <title>{pageTitle}</title>
-        <Col>
+        <Col lg={12}>
           <HeadSection/>
+        </Col>
+      </Row>
+      <Row>
+        <Col lg={12}>
             <main>
               <h1 className={heading}>{pageTitle}</h1>
               <div>

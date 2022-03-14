@@ -6,31 +6,26 @@ import {
     headSectionContainer, 
     headSectionColumn, 
     headSectionLogo,
-    headSectionNavWrap
+    headSectionNavWrap,
+    searchAndLogo
 } from './HeadSection.module.css'
 
 const HeadSection = () => {
   return (
-        <Container fluid={true} id={headSectionContainer}>
-            <Row>
-                {/* <Col lg={3} className={headSectionColumn}>
-                    <div id={headSectionNavWrap}>
-                        <svg width="30" height="30" >
-                            <path d="M 0,5 30,5" stroke="#fff" stroke-width="5"/>
-                            <path d="M 0,14 30,14" stroke="#fff" stroke-width="5"/>
-                            <path d="M 0,23 30,23" stroke="#fff" stroke-width="5"/>
-                        </svg>
-                    </div>
-                </Col> */}
-                <Col lg={4}>
+        <Container fluid={true} className="p-0">
+            <Row id={headSectionContainer}>
+                <Col>
                     <Navigation/>
                 </Col>
-                <Col lg={4} className={headSectionColumn}>
-                    <h2 id={headSectionLogo}>Logo</h2>            
+                <Col>
+                    <h2 id={headSectionLogo}>Logo</h2>
+                </Col>                
+                <Col>
+                    <Search/>    
                 </Col>
-                <Col lg={4}>
-                    <Search/>            
-                </Col>
+                <Col>
+                    <div>Shop icon</div>
+                </Col>                
             </Row>
         </Container>
   )

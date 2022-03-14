@@ -3,9 +3,10 @@
     color: white;
     width: 100%;
     height: 100px;
-    display: flex;
     margin: 0;
     padding: 1%;
+    display: flex;
+    justify-content: space-between;
 }
 
 #headSectionLogo{
@@ -20,10 +21,21 @@
     justify-content: center;
 }
 
+.headSectionColumn > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 #headSectionNavWrap{
     margin: 0;
     text-align: center;
     height: fit-content;
+}
+
+#searchAndLogo{
+    display: flex;
+    justify-content: space-between;
 }
 
 .test {
