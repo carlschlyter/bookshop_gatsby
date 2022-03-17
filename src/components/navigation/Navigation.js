@@ -47,14 +47,14 @@ const Navigation = () => {
                 <span className={`${line} ${line2}`}></span>
                 <span className={`${line} ${line3}`}></span>
               </div>  
-              <div className={menuItems} key={1}>
+              <ul className={menuItems} key={1}>
               {data.wpMenu.menuItems.nodes.map(node => (          
                 <li>
                     <Link to={node.url} className={navLinkText}>
                         {node.label}
                     </Link>
                 </li>))}
-              </div>
+              </ul>
           </div>
         </div>
     </nav>

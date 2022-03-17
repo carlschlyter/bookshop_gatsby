@@ -7,25 +7,36 @@ import {
     headSectionColumn, 
     headSectionLogo,
     headSectionNavWrap,
-    searchAndLogo
+    searchAndLogo,
+    headSectionColumns,
+    headSectionSearchColumn,
+    smallScreenSearchContainer,
+    smallScreenSearchContainerColumn
 } from './HeadSection.module.css'
 
-const HeadSection = () => {
+const HeadSection = ({ pageTitle }) => {
   return (
         <Container fluid={true} className="p-0">
             <Row id={headSectionContainer}>
                 <Col>
                     <Navigation/>
                 </Col>
-                <Col>
-                    <h2 id={headSectionLogo}>Logo</h2>
+                <Col className={headSectionColumns}>
+                    <h2 id={headSectionLogo}>{pageTitle}</h2>
                 </Col>                
-                <Col>
+                <Col className={headSectionColumns} id={headSectionSearchColumn} md={6}>
                     <Search/>    
                 </Col>
-                <Col>
+                <Col className={headSectionColumns}>
                     <div>Shop icon</div>
                 </Col>                
+            </Row>
+            <Row id={smallScreenSearchContainer}>
+                <Col id={smallScreenSearchContainerColumn}>
+                    <div>
+                        <Search/>
+                    </div>                    
+                </Col>
             </Row>
         </Container>
   )

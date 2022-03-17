@@ -9,7 +9,14 @@
     justify-content: space-between;
 }
 
+.headSectionColumns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #headSectionLogo{
+    font-size: 2vw;
     margin: 0;
     text-align: center;
     height: fit-content;
@@ -40,4 +47,32 @@
 
 .test {
     font-family: 'Times New Roman', Times, serif;
+}
+
+#smallScreenSearchContainer {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+    #headSectionContainer {
+        height: 80px;
+    }
+
+    #smallScreenSearchContainer {
+        display: flex;
+    }
+
+    #headSectionSearchColumn {
+        display: none;
+    }
+
+    #headSectionLogo{
+        font-size: 3vw;
+    }
+
+    #smallScreenSearchContainerColumn div {
+        display: flex;
+        justify-content: center;
+    }
 }
