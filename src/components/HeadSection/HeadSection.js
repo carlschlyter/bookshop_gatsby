@@ -11,14 +11,15 @@ import {
     headSectionColumns,
     headSectionSearchColumn,
     smallScreenSearchContainer,
-    smallScreenSearchContainerColumn
+    smallScreenSearchContainerColumn,
+    smallScreenSearchContainerBox
 } from './HeadSection.module.css'
 
 const HeadSection = ({ pageTitle }) => {
   return (
         <Container fluid={true} className="p-0">
             <Row id={headSectionContainer}>
-                <Col>
+                <Col className={headSectionColumns}>
                     <Navigation/>
                 </Col>
                 <Col className={headSectionColumns}>
@@ -32,11 +33,9 @@ const HeadSection = ({ pageTitle }) => {
                 </Col>                
             </Row>
             <Row id={smallScreenSearchContainer}>
-                <Col id={smallScreenSearchContainerColumn}>
-                    <div>
+                    <div id={smallScreenSearchContainerBox}>
                         <Search/>
                     </div>                    
-                </Col>
             </Row>
         </Container>
   )

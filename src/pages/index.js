@@ -16,8 +16,6 @@ const IndexPage = ({ data }) => {
         className={mainImage}
         alt='Svampbild'
         src='../images/coffee_books.png' />
-        <Test name="Äppelvikens Bokhandel" age="1"/>  
-        <p>Det här är nu med i children prop för layoutkomponenten</p>
       </Layout>
   )
 }

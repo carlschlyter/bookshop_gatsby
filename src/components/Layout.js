@@ -15,7 +15,7 @@ const Layout = ({ pageTitle, children }) => {
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col className="p-0">
             <main>
               {/* <h1 className={heading}>{pageTitle}</h1> */}
               <div>
