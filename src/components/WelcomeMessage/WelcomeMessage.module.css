@@ -1,0 +1,17 @@
+#WelcomeMessageMessage {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    top: 25%;
+    text-align: center;
+    width: screen;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-size: 7vh;
+    font-weight: lighter;
+}
+
+#WelcomeMessageMessageBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

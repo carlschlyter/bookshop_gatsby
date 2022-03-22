@@ -77,7 +77,7 @@ body {
   display: block;
   height: 44px;
   width: 48px;
-  top: 18px;
+  top: 10px;
   left: 40px;
   z-index: 5;
   opacity: 0;
@@ -89,7 +89,7 @@ body {
   height: 40px;
   width: 48px;
   position: absolute;
-  top: 18px;
+  top: 10px;
   left: 40px;
   z-index: 2;
   display: flex;

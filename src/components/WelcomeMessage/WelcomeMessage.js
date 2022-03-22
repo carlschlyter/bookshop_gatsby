@@ -1,6 +1,10 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
+import {
+  WelcomeMessageMessage,
+  WelcomeMessageMessageBox
+} from './WelcomeMessage.module.css'
 
 const WelcomeMessage = () => {
 
@@ -24,8 +28,12 @@ const WelcomeMessage = () => {
      <Container fluid='md'> 
          {data.wpPage.homePageSettings.homePageContent.map(field => (
             <Row key={1}>
-                  <Col>{field.header}</Col>
-                  <Col>{field.subHeader}</Col>
+                  <Col id={WelcomeMessageMessageBox}>
+                    <div id={WelcomeMessageMessage}>
+                      <div>{field.header}</div>
+                      <div>{field.subHeader}</div>
+                    </div>
+                  </Col>
             </Row>
          ))}
     </Container>);
