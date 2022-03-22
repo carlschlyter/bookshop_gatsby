@@ -69,7 +69,7 @@ body {
 .navContainer {
   display: block;
   position: relative;
-  height: 60px;  
+  height: 60px; 
 }
 
 .navContainer .checkBox {
@@ -170,3 +170,4 @@ body {
 .navContainer input[type="checkbox"]:checked ~ .logo{
   display: none;
 }
+
