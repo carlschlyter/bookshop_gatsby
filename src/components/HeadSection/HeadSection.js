@@ -18,7 +18,7 @@ import {
 const HeadSection = ({ pageTitle }) => {
   return (
         <Container fluid={true} className="p-0">
-            <Row id={headSectionContainer}>
+            <Row id={headSectionContainer} fluid={true}>
                 <Col className={headSectionColumns}>
                     <Navigation/>
                 </Col>

@@ -1,10 +1,12 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
+import { StaticImage } from 'gatsby-plugin-image';
 import {
   WelcomeMessageMessage,
-  WelcomeMessageMessageBox
-} from './WelcomeMessage.module.css'
+  WelcomeMessageMessageBox,
+  mainImage
+} from './WelcomeMessage.module.css';
 
 const WelcomeMessage = () => {
 
@@ -25,17 +27,26 @@ const WelcomeMessage = () => {
     `)
 
   return (
-     <Container fluid='md'> 
-         {data.wpPage.homePageSettings.homePageContent.map(field => (
+     <Container fluid={true} className="p-0"> 
             <Row key={1}>
-                  <Col id={WelcomeMessageMessageBox}>
+                <Col id={WelcomeMessageMessageBox} >
+                  {data.wpPage.homePageSettings.homePageContent.map(field => (
                     <div id={WelcomeMessageMessage}>
-                      <div>{field.header}</div>
-                      <div>{field.subHeader}</div>
+                      <div>
+                        <div>{field.header}</div>
+                        <div>{field.subHeader}</div>
+                      </div>
                     </div>
-                  </Col>
-            </Row>
-         ))}
+                    ))}
+                    <div>
+                      <StaticImage 
+                        className={mainImage}
+                        alt='Books and Coffee'
+                        src='../../images/booksandcoffeecup_2560x720_blurred.png' 
+                      />
+                    </div>
+                </Col>
+            </Row>        
     </Container>);
 };
 

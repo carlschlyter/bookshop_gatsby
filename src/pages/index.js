@@ -12,10 +12,10 @@ const IndexPage = ({ data }) => {
   return (
       <Layout>
         <WelcomeMessage />
-        <StaticImage 
+        {/* <StaticImage 
         className={mainImage}
         alt='Books and Coffee'
-        src='../images/booksandcoffeecup_2560x720_blurred.png' />
+        src='../images/booksandcoffeecup_2560x720_blurred.png' /> */}
       </Layout>
   )
 }

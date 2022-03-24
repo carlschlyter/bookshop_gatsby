@@ -7,7 +7,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 const Layout = ({ pageTitle, children }) => {
 
   return (
-    <Container fluid={true} className="p-0">
+    <Container fluid={true} className="p-0" >
       <Row>
         <title>{pageTitle}</title>
         <Col className="p-0">
