@@ -17,22 +17,32 @@ const FooterSection = () => {
                       header
                     }
                   }
+                  ... on WpThemeOptionsFooter_Footersection_FooterContent_MyAccount {
+                    fieldGroupName
+                    myAccountLinks {
+                      header
+                    }
+                  }
                 }
               }
             }
-          }
+          }        
         }
     `)
+
     console.log(data.wp.themeOptionsFooter.footerSection.footerContent[0].aboutUsLinks[0])
+
   return (
 
     <Container fluid={true} className="p-0"> 
         <Row key={1}>
-            <Col >
-                {/* {data?.WpThemeOptionsFooter?.Footersection?.FooterContent[0].aboutUsLinks.map(field => ( 
-                    <div>{field.header}</div>
-                ) )} */}
+            <Col>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[0].aboutUsLinks.map(field => ( 
+                    <div>{field.header}</div>
+                ) )}
+            </Col>
+            <Col>
+                {data.wp.themeOptionsFooter.footerSection.footerContent[1].myAccountLinks.map(field => ( 
                     <div>{field.header}</div>
                 ) )}
             </Col>
