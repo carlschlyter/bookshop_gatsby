@@ -1,6 +1,6 @@
 #WelcomeMessageMessage {
     position: absolute;
-    z-index: 1;
+    z-index: -5;
     color: #fff;
     text-align: center;
     width: screen;

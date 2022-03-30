@@ -48,7 +48,7 @@ body {
 
 .navBar .menuItems {
   display: flex;
-  z-index: 10;
+  z-index: 15;
 }
 
 .navbar .navContainer li {

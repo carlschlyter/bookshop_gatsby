@@ -1,7 +1,8 @@
 import * as React from 'react'
 import HeadSection from './headSection/HeadSection'
+import FooterSection from './FooterSection/FooterSection';
 import { heading } from './layout.module.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Row, Col} from 'react-bootstrap'
 
 const Layout = ({ pageTitle, children }) => {
@@ -22,6 +23,11 @@ const Layout = ({ pageTitle, children }) => {
               {children}
               </div>
             </main>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <FooterSection />
         </Col>
       </Row>
     </Container>

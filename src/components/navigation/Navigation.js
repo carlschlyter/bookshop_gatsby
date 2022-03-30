@@ -15,8 +15,7 @@ line1,
 line2,
 line3,
 logo,
-menuItems,
-special
+menuItems
 } from './navigation.module.css'
 
 
@@ -41,7 +40,7 @@ const Navigation = () => {
   return (
     <nav>
         <div className={navBar}>
-          <div className={`${container} ${navContainer}`} id={special}>
+          <div className={`${container} ${navContainer}`} >
               <input className={checkBox} type="checkbox" name="" id="" />
               <div className={hamburgerLines}>
                 <span className={`${line} ${line1}`}></span>
