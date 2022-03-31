@@ -23,14 +23,46 @@ const FooterSection = () => {
                       header
                     }
                   }
+                  ... on WpThemeOptionsFooter_Footersection_FooterContent_CustomerService {
+                    fieldGroupName
+                    customerServiceLinks {
+                      header
+                    }
+                  }
+                  ... on WpThemeOptionsFooter_Footersection_FooterContent_SocialMedia {
+                    fieldGroupName
+                    socialMediaLinks {
+                      header
+                    }
+                  }
+                  ... on WpThemeOptionsFooter_Footersection_FooterContent_GeneralInformation {
+                    fieldGroupName
+                    text
+                  }
+                  ... on WpThemeOptionsFooter_Footersection_FooterContent_Cooperations {
+                    fieldGroupName
+                    cooperationsLinks {
+                      header
+                    }
+                  }
+                  ... on WpThemeOptionsFooter_Footersection_FooterContent_CopyrightNotion {
+                    fieldGroupName
+                    text
+                  }
+                  ... on WpThemeOptionsFooter_Footersection_FooterContent_DevelopedBy {
+                    fieldGroupName
+                    text
+                  }
                 }
               }
             }
-          }        
+          }
         }
     `)
 
-    console.log(data.wp.themeOptionsFooter.footerSection.footerContent[0].aboutUsLinks[0])
+    // console.log(data.wp.themeOptionsFooter.footerSection.footerContent[0].aboutUsLinks[0])
+
+    console.log(data.wp.themeOptionsFooter.footerSection.footerContent[4].text)
 
   return (
 
@@ -46,7 +78,35 @@ const FooterSection = () => {
                     <div>{field.header}</div>
                 ) )}
             </Col>
-        </Row>        
+            <Col>
+                {data.wp.themeOptionsFooter.footerSection.footerContent[2].customerServiceLinks.map(field => ( 
+                    <div>{field.header}</div>
+                ) )}
+            </Col>
+            <Col>
+                {data.wp.themeOptionsFooter.footerSection.footerContent[3].socialMediaLinks.map(field => ( 
+                    <div>{field.header}</div>
+                ) )}
+            </Col>
+        </Row>
+        <Row>
+            <Col>
+                <div>{data.wp.themeOptionsFooter.footerSection.footerContent[4].text} </div>
+            </Col>
+        </Row>
+        <Row>
+            <Col>
+                {data.wp.themeOptionsFooter.footerSection.footerContent[5].cooperationsLinks.map(field => ( 
+                    <div>{field.header}</div>
+                ) )}
+            </Col>
+        </Row>
+        <Row>
+            <Col>
+                <div>{data.wp.themeOptionsFooter.footerSection.footerContent[6].text} </div>
+                <div>{data.wp.themeOptionsFooter.footerSection.footerContent[7].text} </div>
+            </Col>
+        </Row>
     </Container>
 
     );

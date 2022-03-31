@@ -3,7 +3,7 @@ import Test from '../components/Test'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import WelcomeMessage from '../components/WelcomeMessage/WelcomeMessage'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import {mainImage} from '../components/layout.module.css'
 import { Container } from 'react-bootstrap'
 
