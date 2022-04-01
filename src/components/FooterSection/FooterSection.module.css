@@ -1,3 +1,13 @@
-#FooterSectionBox{
-    background-color: aliceblue;
+.FooterSectionBox{
+    background-color:rgba(81,85,84,255);
+    width:100%;
+    padding: 3vh;
+    margin: 0;
+    height: fit-content;    
+    margin-top: auto;
+}
+
+.FooterSectionHeader{
+    color:white;
+    font-size: 1.25vw;
 }

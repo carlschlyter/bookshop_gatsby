@@ -26,7 +26,7 @@ const Layout = ({ pageTitle, children }) => {
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col className="p-0">
           <FooterSection />
         </Col>
       </Row>

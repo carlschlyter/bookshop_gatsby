@@ -1,7 +1,12 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FooterSectionBox,FooterContent } from './footersection.module.css'
+import { 
+  FooterSectionBox,
+  FooterContent,
+  FooterSectionHeader
+ } from './footersection.module.css'
 
 const FooterSection = () => {
 
@@ -15,22 +20,31 @@ const FooterSection = () => {
                     fieldGroupName
                     aboutUsLinks {
                       header
+                      link {
+                        target
+                        url
+                        title
+                      }
                     }
+                    sectionHeader
                   }
                   ... on WpThemeOptionsFooter_Footersection_FooterContent_MyAccount {
                     fieldGroupName
+                    sectionHeader
                     myAccountLinks {
                       header
                     }
                   }
                   ... on WpThemeOptionsFooter_Footersection_FooterContent_CustomerService {
                     fieldGroupName
+                    sectionHeader
                     customerServiceLinks {
                       header
                     }
                   }
                   ... on WpThemeOptionsFooter_Footersection_FooterContent_SocialMedia {
                     fieldGroupName
+                    sectionHeader
                     socialMediaLinks {
                       header
                     }
@@ -60,48 +74,62 @@ const FooterSection = () => {
         }
     `)
 
-    // console.log(data.wp.themeOptionsFooter.footerSection.footerContent[0].aboutUsLinks[0])
+    // console.log(data.wp.themeOptionsFooter.footerSection.footerContent[0].aboutUsLinks[0].link.url)
 
-    console.log(data.wp.themeOptionsFooter.footerSection.footerContent[4].text)
+    console.log(data.wp.themeOptionsFooter.footerSection.footerContent[0].sectionHeader)
 
   return (
 
     <Container fluid={true} className="p-0"> 
-        <Row key={1}>
+        <Row key={1} className={FooterSectionBox}>
             <Col>
+                <p className={FooterSectionHeader}>
+                {data.wp.themeOptionsFooter.footerSection.footerContent[0].sectionHeader}
+                </p>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[0].aboutUsLinks.map(field => ( 
+                <Link to={field.link?.url}>
                     <div>{field.header}</div>
+                </Link>
                 ) )}
             </Col>
             <Col>
+                <p className={FooterSectionHeader}>
+                {data.wp.themeOptionsFooter.footerSection.footerContent[1].sectionHeader}
+                </p>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[1].myAccountLinks.map(field => ( 
                     <div>{field.header}</div>
                 ) )}
             </Col>
             <Col>
+                <p className={FooterSectionHeader}>
+                {data.wp.themeOptionsFooter.footerSection.footerContent[2].sectionHeader}
+                </p>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[2].customerServiceLinks.map(field => ( 
                     <div>{field.header}</div>
                 ) )}
             </Col>
             <Col>
+                <p className={FooterSectionHeader}>
+                {data.wp.themeOptionsFooter.footerSection.footerContent[3].sectionHeader}
+                </p>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[3].socialMediaLinks.map(field => ( 
                     <div>{field.header}</div>
                 ) )}
             </Col>
         </Row>
-        <Row>
+        <Row className={FooterSectionBox}>
             <Col>
                 <div>{data.wp.themeOptionsFooter.footerSection.footerContent[4].text} </div>
             </Col>
         </Row>
-        <Row>
+        <Row className={FooterSectionBox}>
             <Col>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[5].cooperationsLinks.map(field => ( 
                     <div>{field.header}</div>
                 ) )}
             </Col>
         </Row>
-        <Row>
+        <Row className={FooterSectionBox}>
             <Col>
                 <div>{data.wp.themeOptionsFooter.footerSection.footerContent[6].text} </div>
                 <div>{data.wp.themeOptionsFooter.footerSection.footerContent[7].text} </div>

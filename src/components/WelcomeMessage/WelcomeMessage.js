@@ -28,8 +28,8 @@ const WelcomeMessage = () => {
 
   return (
      <Container fluid={true} className="p-0"> 
-            <Row key={1}>
-                <Col id={WelcomeMessageMessageBox} >
+            <Row key={1} className="p-0">
+                <Col id={WelcomeMessageMessageBox} className={`${"m-0"} ${"p-0"}`}>
                   {data.wpPage.homePageSettings.homePageContent.map(field => (
                     <div id={WelcomeMessageMessage}>
                       <div>
@@ -39,11 +39,13 @@ const WelcomeMessage = () => {
                     </div>
                     ))}
                     <div>
-                      <StaticImage 
-                        className={mainImage}
-                        alt='Books and Coffee'
-                        src='../../images/booksandcoffeecup_2560x720_blurred.png' 
-                      />
+                      <div>
+                        <StaticImage  
+                          className={mainImage}
+                          alt='Books and Coffee'
+                          src='../../images/booksandcoffeecup_2560x720_blurred.png' 
+                        />
+                      </div>                      
                     </div>
                 </Col>
             </Row>        

@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
 import { 
 navLinks, 
 navLinkItem, 
@@ -16,7 +16,7 @@ line2,
 line3,
 logo,
 menuItems
-} from './navigation.module.css'
+} from './navigation.module.css';
 
 
 const Navigation = () => {
