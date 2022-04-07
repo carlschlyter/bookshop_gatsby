@@ -32,7 +32,7 @@ const HeadSection = ({ pageTitle }) => {
                     <div>Shop icon</div>
                 </Col>                
             </Row>
-            <Row id={smallScreenSearchContainer}>
+            <Row id={smallScreenSearchContainer} fluid={true}>
                     <div id={smallScreenSearchContainerBox}>
                         <Search/>
                     </div>                    

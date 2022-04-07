@@ -76,16 +76,16 @@ const FooterSection = () => {
 
     // console.log(data.wp.themeOptionsFooter.footerSection.footerContent[0].aboutUsLinks[0].link.url)
 
-    console.log(data.wp.themeOptionsFooter.footerSection.footerContent[0].sectionHeader)
+    // console.log(data.wp.themeOptionsFooter.footerSection.footerContent[0].sectionHeader)
 
   return (
 
     <Container fluid={true} className="p-0"> 
         <Row key={1} className={FooterSectionBox}>
             <Col>
-                <p className={FooterSectionHeader}>
+                <h6 className={FooterSectionHeader}>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[0].sectionHeader}
-                </p>
+                </h6>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[0].aboutUsLinks.map(field => ( 
                 <Link to={field.link?.url}>
                     <div>{field.header}</div>
@@ -93,25 +93,25 @@ const FooterSection = () => {
                 ) )}
             </Col>
             <Col>
-                <p className={FooterSectionHeader}>
+                <h6 className={FooterSectionHeader}>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[1].sectionHeader}
-                </p>
+                </h6>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[1].myAccountLinks.map(field => ( 
                     <div>{field.header}</div>
                 ) )}
             </Col>
             <Col>
-                <p className={FooterSectionHeader}>
+                <h6 className={FooterSectionHeader}>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[2].sectionHeader}
-                </p>
+                </h6>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[2].customerServiceLinks.map(field => ( 
                     <div>{field.header}</div>
                 ) )}
             </Col>
             <Col>
-                <p className={FooterSectionHeader}>
+                <h6 className={FooterSectionHeader}>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[3].sectionHeader}
-                </p>
+                </h6>
                 {data.wp.themeOptionsFooter.footerSection.footerContent[3].socialMediaLinks.map(field => ( 
                     <div>{field.header}</div>
                 ) )}
