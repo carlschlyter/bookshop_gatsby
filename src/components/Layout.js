@@ -15,16 +15,16 @@ const Layout = ({ pageTitle, children }) => {
           <HeadSection pageTitle="Äppelvikens Bokhandel"/>
         </Col>
       </Row>
-      <Row>
-        <Col className="p-0">
-            <main>
+      {/* <Row>
+        <Col className="p-0"> */}
+            {/* <main> */}
               {/* <h1 className={heading}>{pageTitle}</h1> */}
               <div>
               {children}
               </div>
-            </main>
-        </Col>
-      </Row>
+            {/* </main> */}
+        {/* </Col>
+      </Row> */}
       <Row>
         <Col className="p-0">
           <FooterSection />

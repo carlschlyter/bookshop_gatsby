@@ -18,7 +18,7 @@ import {
 const HeadSection = ({ pageTitle }) => {
   return (
         <Container fluid={true} className="p-0">
-            <Row id={headSectionContainer} fluid={true}>
+            <Row id={headSectionContainer}>
                 <Col className={headSectionColumns}>
                     <Navigation/>
                 </Col>
@@ -32,11 +32,11 @@ const HeadSection = ({ pageTitle }) => {
                     <div>Shop icon</div>
                 </Col>                
             </Row>
-            <Row id={smallScreenSearchContainer} fluid={true}>
+            <div id={smallScreenSearchContainer} fluid={true}>
                     <div id={smallScreenSearchContainerBox}>
                         <Search/>
                     </div>                    
-            </Row>
+            </div>
         </Container>
   )
 }
