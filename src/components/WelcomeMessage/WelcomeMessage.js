@@ -5,8 +5,7 @@ import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import {
   WelcomeMessageMessage,
   WelcomeMessageMessageBox,
-  mainImage,
-  makeItFit
+  mainImage
 } from './WelcomeMessage.module.css';
 
 const WelcomeMessage = () => {
@@ -44,7 +43,7 @@ const image = getImage(data.wpPage.homePageSettings.homePageContent[0].image?.lo
   return (
     
     //  <Container fluid={true} className="p-0"> 
-            <Row key={1} id={makeItFit}>
+            <Row key={1}>
                 <Col id={WelcomeMessageMessageBox} className={`${"m-0"} ${"p-0"}`}>
                   {data.wpPage.homePageSettings.homePageContent.map(field => (
                     

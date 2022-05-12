@@ -1,7 +1,7 @@
 #WelcomeMessageMessage {
     position: absolute;
     z-index: -5;
-    color: #fff;
+    color: lightgrey;
     text-align: center;
     width: screen;
     /* font-family: 'Montserrat', sans-serif; */

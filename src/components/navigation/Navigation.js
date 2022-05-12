@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import {Container, Row, Col} from 'react-bootstrap'
 import { Link } from 'gatsby';
 import { 
 navLinks, 
@@ -46,15 +47,15 @@ const Navigation = () => {
                 <span className={`${line} ${line1}`}></span>
                 <span className={`${line} ${line2}`}></span>
                 <span className={`${line} ${line3}`}></span>
-              </div>  
-              <ul className={menuItems} key={1}>
-              {data.wpMenu.menuItems.nodes.map(node => (          
-                <li>
-                    <Link to={node.url} className={navLinkText}>
-                        {node.label}
-                    </Link>
-                </li>))}
-              </ul>
+              </div>
+                <ul className={menuItems} key={1}>
+                {data.wpMenu.menuItems.nodes.map(node => (          
+                  <li>
+                      <Link to={node.url} className={navLinkText}>
+                          {node.label}
+                      </Link>
+                  </li>))}
+                </ul>
           </div>
         </div>
     </nav>
